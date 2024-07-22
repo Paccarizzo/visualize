@@ -1,3 +1,5 @@
+import pandas as pd
+
 def log_input_reader(lines:list[str]) -> list[list[str], list[str], list[str]]:
     mystr = ''
     for x in lines:
@@ -28,7 +30,7 @@ def log_input_reader(lines:list[str]) -> list[list[str], list[str], list[str]]:
                 while i < stop and x[i] != '':
                     temp_v += x[i]
                     i += 1
-                i -=1
+                break
             i +=1
             
         port.append(temp_p)
